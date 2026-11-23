@@ -4,4 +4,4 @@ from .models import Product
 def lista_productos(request):
     productos = Product.objects.all() # esto equivale a un SELECT * FROM productos_product; en sql
     contexto = {'productos': productos} # este diccionario permite enviar información desde Python a una plantilla HTML
-    return render(request, 'lista_productos.html', contexto) # Renderizamos la plantilla HTML
+    return render(request, 'productos/lista.html', contexto) # Renderizamos la plantilla HTML
